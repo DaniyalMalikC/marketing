@@ -2,9 +2,16 @@ import { ErrorBoundary } from "@/components/error-boundary";
 import { Providers } from "@/components/providers";
 import { generateSEO } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Serif_Display, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, DM_Serif_Display, Inter, Playfair_Display } from "next/font/google";
 import "@/styles/base/globals.scss";
 import "@/styles/base/animations.scss";
+
+// Sans font - Inter
+const sansFont = Inter({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 // Logo font - Using Playfair Display as Tanzif alternative (elegant serif)
 const logoFont = Playfair_Display({
@@ -48,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${logoFont.variable} ${headingFont.variable} ${bodyFont.variable} ${fallbackFont.variable} flex min-h-screen flex-col font-body antialiased`}
+        className={`${sansFont.variable} ${logoFont.variable} ${headingFont.variable} ${bodyFont.variable} ${fallbackFont.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
         <ErrorBoundary>
           <Providers>{children}</Providers>

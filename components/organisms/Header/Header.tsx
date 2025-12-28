@@ -32,34 +32,42 @@ export function Header() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 z-50 w-full border-b border-white/5 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60"
     >
       <div className="container flex h-16 items-center justify-between">
-        <Logo />
+        <Logo className="text-white" />
 
-        <nav className="hidden items-center gap-6 md:flex">
-          <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
-            Home
+        <nav className="hidden items-center gap-8 md:flex">
+          <Link href="/company" className="text-sm font-medium text-gray-400 transition-colors hover:text-white">
+            Company
           </Link>
-          <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary">
-            About
+          <Link href="/works" className="text-sm font-medium text-gray-400 transition-colors hover:text-white">
+            Works
           </Link>
-          <Link
-            href="/contact"
-            className="text-sm font-medium transition-colors hover:text-primary"
-          >
-            Contact
+          <Link href="/pricing" className="text-sm font-medium text-gray-400 transition-colors hover:text-white">
+            Pricing
+          </Link>
+          <Link href="/resources" className="text-sm font-medium text-gray-400 transition-colors hover:text-white">
+            Resources
           </Link>
         </nav>
 
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" onClick={toggleTheme} aria-label="Toggle theme">
+        <div className="flex items-center gap-4">
+          <div className="hidden items-center gap-2 text-sm font-medium text-white md:flex">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#cff85d] opacity-75"></span>
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#cff85d]"></span>
+            </span>
+            Available
+          </div>
+          
+          <Button variant="ghost" size="sm" onClick={toggleTheme} aria-label="Toggle theme" className="hidden text-white hover:bg-white/10 hover:text-white sm:flex">
             <Icon
               name={currentTheme === "dark" ? "mdi:white-balance-sunny" : "mdi:moon-waning-crescent"}
               size={20}
             />
           </Button>
-          <Button size="sm">Get Started</Button>
+          <Button size="sm" className="bg-white font-semibold text-black hover:bg-gray-200">Contact Now</Button>
         </div>
       </div>
     </motion.header>

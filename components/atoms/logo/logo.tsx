@@ -31,23 +31,12 @@ export function Logo({
 
 function LogoIcon({ size = 32 }: { size?: number }) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="shrink-0"
-      aria-hidden="true"
+    <div 
+      style={{ width: size, height: size }} 
+      className="flex items-center justify-center rounded bg-[#cff85d]"
     >
-      {/* M shape with modern design */}
-      <path
-        d="M20 75V25L35 45L50 25L65 45L80 25V75H70V45L50 65L30 45V75H20Z"
-        className="fill-primary"
-      />
-      {/* Accent dot */}
-      <circle cx="50" cy="20" r="8" className="fill-primary animate-pulse-slow" />
-    </svg>
+      <div className="h-1/2 w-1/2 bg-black/20" />
+    </div>
   );
 }
 
