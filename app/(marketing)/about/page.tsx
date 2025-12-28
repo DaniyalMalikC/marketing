@@ -19,7 +19,7 @@ export default function AboutPage() {
           </Text>
         </div>
 
-        <div className="space-y-8" data-aos="fade-up">
+        <div className="space-y-8">
           <div>
             <h2 className="mb-4 text-2xl font-semibold">Our Mission</h2>
             <Text className="text-muted-foreground">

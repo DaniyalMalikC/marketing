@@ -1,11 +1,8 @@
 "use client";
 
 import type { BaseProps } from "@/types";
-import AOS from "aos";
 import Lenis from "lenis";
 import { useEffect } from "react";
-
-import "aos/dist/aos.css";
 
 export function AnimationProvider({ children }: BaseProps) {
   // Initialize Lenis smooth scroll
@@ -31,22 +28,6 @@ export function AnimationProvider({ children }: BaseProps) {
       lenis.destroy();
     };
   }, []);
-
-  // Initialize AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 50,
-      delay: 0,
-    });
-  }, []);
-
-  // Refresh AOS on route change
-  useEffect(() => {
-    AOS.refresh();
-  });
 
   return <>{children}</>;
 }

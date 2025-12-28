@@ -47,3 +47,6 @@ next-env.d.ts
 
 # OS
 Thumbs.db
+
+# Documentation
+readme_instructions/

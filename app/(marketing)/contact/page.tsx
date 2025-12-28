@@ -41,7 +41,7 @@ export default function ContactPage() {
           </Text>
         </div>
 
-        <div className="mb-12 grid gap-6 md:grid-cols-3" data-aos="fade-up">
+        <div className="mb-12 grid gap-6 md:grid-cols-3">
           {contactMethods.map((method, index) => (
             <motion.div
               key={method.title}
@@ -69,7 +69,7 @@ export default function ContactPage() {
           ))}
         </div>
 
-        <Card data-aos="fade-up" data-aos-delay="200">
+        <Card>
           <CardHeader>
             <CardTitle>Send us a message</CardTitle>
           </CardHeader>

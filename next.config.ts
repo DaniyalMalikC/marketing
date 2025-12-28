@@ -32,11 +32,6 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
 
-  // ESLint
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-
   // Experimental features
   experimental: {
     optimizePackageImports: [
@@ -46,14 +41,8 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Webpack
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-    return config;
-  },
+  // Turbopack configuration (empty to silence warning)
+  turbopack: {},
 };
 
 export default nextConfig;

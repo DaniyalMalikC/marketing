@@ -3,7 +3,7 @@
     /* Language and Environment */
     "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     /* Modules */
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -51,6 +51,12 @@
     ],
     "allowJs": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": ["node_modules", ".next", "out", "dist"]
 }
