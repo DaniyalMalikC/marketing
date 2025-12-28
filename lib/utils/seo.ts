@@ -32,6 +32,7 @@ export function generateSEO(props: SEOProps = {}): Metadata {
     title: finalTitle,
     description,
     applicationName: siteConfig.name,
+    keywords: [...siteConfig.keywords],
     authors: [
       {
         name: siteConfig.creator.name,
@@ -64,7 +65,8 @@ export function generateSEO(props: SEOProps = {}): Metadata {
       title: finalTitle,
       description,
       images: [image],
-      creator: siteConfig.links.twitter,
+      creator: "@markeva",
+      site: "@markeva",
     },
     robots: {
       index: !noIndex,
@@ -76,6 +78,9 @@ export function generateSEO(props: SEOProps = {}): Metadata {
         "max-image-preview": "large",
         "max-snippet": -1,
       },
+    },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
     },
   };
 }

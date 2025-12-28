@@ -13,9 +13,9 @@ export default function AboutPage() {
         className="mx-auto max-w-3xl"
       >
         <div className="mb-8 text-center">
-          <h1 className="mb-4 text-4xl font-bold sm:text-5xl">About Us</h1>
+          <h1 className="mb-4 text-4xl font-bold sm:text-5xl">About Markeva</h1>
           <Text variant="large" className="text-muted-foreground">
-            Building the future of marketing websites
+            Pioneering the future of digital marketing excellence
           </Text>
         </div>
 
@@ -23,9 +23,10 @@ export default function AboutPage() {
           <div>
             <h2 className="mb-4 text-2xl font-semibold">Our Mission</h2>
             <Text className="text-muted-foreground">
-              We are committed to providing developers with the best tools and boilerplates to build
-              modern, scalable, and production-ready marketing websites. Our platform combines
-              cutting-edge technologies with best practices to deliver exceptional results.
+              At Markeva, we're committed to transforming how businesses connect with their
+              audiences. We combine innovative technology with creative excellence to deliver
+              marketing solutions that don't just meet expectations—they exceed them. Our mission is
+              to empower brands to tell their stories in ways that resonate, engage, and convert.
             </Text>
           </div>
 
@@ -33,12 +34,12 @@ export default function AboutPage() {
             <h2 className="mb-4 text-2xl font-semibold">What We Offer</h2>
             <div className="space-y-4">
               {[
-                "Production-ready Next.js boilerplate",
-                "Clean architecture with atomic design",
-                "Type-safe development with TypeScript",
-                "Beautiful UI with Tailwind CSS",
-                "Smooth animations and interactions",
-                "SEO optimized and performance focused",
+                "Data-driven marketing strategies",
+                "Comprehensive SEO & content marketing",
+                "Social media management & advertising",
+                "Email marketing campaigns that convert",
+                "Advanced analytics & reporting",
+                "Brand development & creative services",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <Icon name="mdi:check-circle" size={24} className="mt-0.5 text-primary" />
@@ -51,9 +52,10 @@ export default function AboutPage() {
           <div>
             <h2 className="mb-4 text-2xl font-semibold">Our Values</h2>
             <Text className="text-muted-foreground">
-              We believe in clean code, scalable architecture, and developer experience. Every
-              decision we make is guided by these principles to ensure you get the best possible
-              foundation for your projects.
+              Excellence, innovation, and integrity drive everything we do. We believe in
+              transparent communication, measurable results, and building long-term partnerships
+              with our clients. Your success is our success, and we're dedicated to delivering
+              strategies that create real, sustainable growth for your business.
             </Text>
           </div>
         </div>

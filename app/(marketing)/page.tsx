@@ -7,34 +7,34 @@ import { motion } from "framer-motion";
 export default function HomePage() {
   const features = [
     {
-      icon: "mdi:rocket-launch",
-      title: "Fast Performance",
-      description: "Optimized for speed with Next.js 15 and React 19",
+      icon: "mdi:chart-line",
+      title: "Data-Driven Insights",
+      description: "Harness the power of analytics to make informed marketing decisions",
     },
     {
-      icon: "mdi:palette",
-      title: "Beautiful Design",
-      description: "Crafted with Tailwind CSS and modern design principles",
+      icon: "mdi:target",
+      title: "Precision Targeting",
+      description: "Reach your ideal audience with laser-focused campaign strategies",
     },
     {
-      icon: "mdi:animation",
-      title: "Smooth Animations",
-      description: "Powered by Framer Motion, GSAP, and Lenis",
+      icon: "mdi:lightbulb",
+      title: "Creative Excellence",
+      description: "Stand out with compelling content that resonates with your audience",
     },
     {
-      icon: "mdi:cog",
-      title: "Type Safe",
-      description: "Built with TypeScript for reliability and scalability",
+      icon: "mdi:trending-up",
+      title: "Growth Optimization",
+      description: "Scale your business with proven strategies that deliver results",
     },
     {
-      icon: "mdi:cloud",
-      title: "Zustand State",
-      description: "Simple and efficient state management",
+      icon: "mdi:email",
+      title: "Email Marketing",
+      description: "Engage customers with personalized email campaigns that convert",
     },
     {
-      icon: "mdi:code-braces",
-      title: "Clean Code",
-      description: "Atomic design with strict separation of concerns",
+      icon: "mdi:share-variant",
+      title: "Social Media Mastery",
+      description: "Build meaningful connections across all social platforms",
     },
   ];
 
@@ -49,27 +49,27 @@ export default function HomePage() {
         >
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border bg-muted px-4 py-2">
             <Icon name="mdi:sparkles" size={20} className="text-primary" />
-            <Text variant="small">Production Ready</Text>
+            <Text variant="small">Transform Your Marketing</Text>
           </div>
           <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-            Build Amazing
+            Elevate Your Brand
             <br />
-            <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-              Marketing Sites
+            <span className="bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent">
+              Drive Real Results
             </span>
           </h1>
           <Text variant="large" className="mx-auto mb-8 max-w-2xl text-muted-foreground">
-            A modern, scalable, and production-ready marketing website boilerplate built with
-            Next.js, TypeScript, Tailwind CSS, and more.
+            Where innovation meets excellence. Markeva delivers cutting-edge digital marketing
+            solutions that transform your vision into measurable success.
           </Text>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button size="lg">
-              Get Started
+              Start Growing Today
               <Icon name="mdi:arrow-right" size={20} />
             </Button>
             <Button variant="outline" size="lg">
-              <Icon name="mdi:github" size={20} />
-              View on GitHub
+              <Icon name="mdi:play-circle" size={20} />
+              Watch Demo
             </Button>
           </div>
         </motion.div>
@@ -84,9 +84,9 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           className="mb-12 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Everything You Need</h2>
+          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Comprehensive Marketing Solutions</h2>
           <Text variant="large" className="mx-auto max-w-2xl text-muted-foreground">
-            Built with the latest technologies and best practices
+            Everything you need to succeed in today's digital landscape
           </Text>
         </motion.div>
 
@@ -122,9 +122,11 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Ready to Get Started?</h2>
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
+              Ready to Transform Your Marketing?
+            </h2>
             <Text variant="large" className="mx-auto mb-8 max-w-2xl text-muted-foreground">
-              Start building your next marketing site with this production-ready boilerplate
+              Join thousands of businesses that trust Markeva to elevate their digital presence
             </Text>
             <Button size="lg">
               Get Started Now

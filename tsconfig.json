@@ -8,7 +8,6 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
@@ -49,8 +48,7 @@
         "name": "next"
       }
     ],
-    "allowJs": true,
-    "ignoreDeprecations": "6.0"
+    "allowJs": true
   },
   "include": [
     "next-env.d.ts",

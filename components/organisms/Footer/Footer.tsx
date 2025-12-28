@@ -1,4 +1,5 @@
 import { Icon } from "@/components/atoms";
+import { Logo } from "@/components/atoms/logo";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
 
@@ -10,10 +11,7 @@ export function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Icon name="mdi:rocket-launch" size={32} className="text-primary" />
-              <span className="text-xl font-bold">{siteConfig.name}</span>
-            </div>
+            <Logo />
             <p className="text-sm text-muted-foreground">{siteConfig.description}</p>
           </div>
 
