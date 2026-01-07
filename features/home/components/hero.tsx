@@ -2,178 +2,166 @@
 
 import { Button, Icon, Text } from "@/components/atoms";
 import { Card } from "@/components/molecules";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
+import { EsteemedClientsCard } from "./esteemed-clients-card";
+import { MarketingTeamCard } from "./marketing-team-card";
+import { TrustedGrowthCard } from "./trusted-growth-card";
+import { SuccessRateCard } from "./success-rate-card";
+import { GlobalPresenceCard } from "./global-presence-card";
+
+export function BackgroundIllustration() {
+  return (
+     <div className="pointer-events-none absolute inset-0 -z-1">
+        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,#0c0e11_0%,#050607_60%)]" /> */}
+        <div className="absolute left-1/2 top-6 h-[840px] w-[840px] -translate-x-1/2 rounded-full border border-white/10 opacity-20" />
+        <div className="absolute left-1/2 top-28 h-[680px] w-[680px] -translate-x-1/2 rounded-full border border-white/5 opacity-30" />
+        <div className="absolute left-1/2 top-52 h-[540px] w-[540px] -translate-x-1/2 rounded-full border border-white/5 opacity-15" />
+        <div className="absolute -left-24 bottom-10 h-72 w-72 rounded-full bg-[#c6f45f]/20 blur-[130px]" />
+        <div className="absolute right-0 top-24 h-72 w-72 rounded-full bg-[#c6f45f]/12 blur-[130px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,#c6f45f0a,transparent_45%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:36px_36px] opacity-60" />
+        <div className="pointer-events-none absolute inset-x-0 -bottom-8 h-32 bg-gradient-to-r from-[#c6f45f]/22 via-transparent to-transparent blur-3xl" />
+        {/* <div className="absolute inset-x-0 top-[46%] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" /> */}
+        <div className="absolute left-24 top-24 text-[#d5ff6a]/80">
+          <Icon name="mdi:star-four-points" size={26} aria-hidden />
+        </div>
+        <div className="absolute right-24 bottom-16 text-[#d5ff6a]/60">
+          <Icon name="mdi:star-four-points" size={26} aria-hidden />
+        </div>
+        <div className="absolute inset-x-12 bottom-[14%] h-64 rounded-[40%] bg-[radial-gradient(circle_at_50%_50%,#ffffff22,transparent_65%)] blur-3xl" />
+      </div>
+  );
+}
 
 export function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+  const easing = [0.22, 1, 0.36, 1];
+  const baseMotion = prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 };
+
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black pt-24 pb-12 text-white">
-      {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      <div className="absolute left-0 top-0 -z-10 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[100px]" />
-      <div className="absolute right-0 bottom-0 -z-10 h-[500px] w-[500px] rounded-full bg-secondary/5 blur-[100px]" />
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-28 pb-16 text-white sm:pt-32">
+      {/* Background */}
+     <BackgroundIllustration />
 
-      <div className="container flex flex-col items-center gap-12">
-        {/* Hero Content */}
-        <div className="flex max-w-4xl flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
-          >
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-sm transition-colors hover:bg-white/10">
-              <span className="rounded-full bg-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-black">
-                New
-              </span>
-              <Text variant="small" className="font-medium text-white">
-                No Hidden Pricing
-              </Text>
-              <Icon name="mdi:arrow-right" size={16} className="text-gray-400" />
-            </div>
-          </motion.div>
+      <div className="relative flex wx-auto w-full max-w-6xl flex-col items-center gap-12 text-center px-4">
 
+        <motion.div
+          initial={baseMotion}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: easing }}
+          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/80 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.7)] backdrop-blur"
+        >
+          <span className="rounded-full bg-white px-2 py-0.5 text-[10px] font-black text-black">New</span>
+          <span className="text-sm font-semibold text-white">No Hidden Pricing</span>
+          <Icon name="mdi:arrow-top-right" size={16} className="text-gray-300" aria-hidden />
+        </motion.div>
+
+        <div className="flex w-full max-w-5xl flex-col items-center gap-6">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={baseMotion}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-6 font-bold leading-[1.1] tracking-tight"
+            transition={{ duration: 0.7, delay: 0.1, ease: easing }}
+            className="flex flex-col text-balance font-heading text-5xl font-bold leading-[1.04] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
           >
-            <span className="block text-5xl font-sans font-bold sm:text-6xl md:text-7xl lg:text-8xl">Fueling the Next</span>
-            <span className="block text-5xl font-heading font-normal sm:text-6xl md:text-7xl lg:text-8xl">Generation of Brands</span>
+            <span className="font-sans font-extrabold text-white">Fueling the Next</span>
+            <span className="font-heading font-semibold text-white">Generation of Brands</span>
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div
+            initial={baseMotion}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-10 max-w-2xl text-lg text-gray-400 sm:text-xl"
+            transition={{ duration: 0.7, delay: 0.2, ease: easing }}
+            className="max-w-2xl text-center"
           >
-            Powering bold ideas with strategy, creativity, and growth.
-          </motion.p>
+            <Text variant="large" className="text-lg text-gray-300 sm:text-xl">
+              Powering bold ideas with strategy, creativity, and growth.
+            </Text>
+          </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={baseMotion}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: easing }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <Button size="lg" className="h-12 rounded-full bg-[#cff85d] px-8 text-black hover:bg-[#cff85d]/90">
+            <Button
+              size="lg"
+              className="group h-12 rounded-full bg-[#c6f45f] px-8 font-semibold text-black shadow-[0_20px_50px_-30px_rgba(198,244,95,0.8)] transition-all duration-300 hover:bg-[#d4ff74] hover:shadow-[0_25px_80px_-40px_rgba(198,244,95,0.9)] focus-visible:ring-offset-0"
+              aria-label="Get started with our services"
+            >
               Get Started
-              <Icon name="mdi:arrow-right" size={20} className="ml-2" />
+              <Icon name="mdi:arrow-right" size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button
               variant="ghost"
               size="lg"
-              className="h-12 rounded-full bg-transparent px-8 text-white hover:bg-white/10"
+              className="group h-12 rounded-full border border-white/10 bg-white/5 px-8 text-white transition-all duration-300 hover:border-white/20 hover:bg-white/10 focus-visible:ring-offset-0"
+              aria-label="Watch product demo"
             >
-              <div className="mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-white text-black">
+              <span className="mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-white text-black transition-transform duration-300 group-hover:scale-110">
                 <Icon name="mdi:play" size={14} />
-              </div>
+              </span>
               Watch Demo
             </Button>
           </motion.div>
         </div>
-
-        {/* Bento Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-6"
-        >
-          {/* Card 1: Marketing Team */}
-          <Card className="relative col-span-1 h-[280px] overflow-hidden rounded-3xl border-0 bg-muted/50 p-0 sm:col-span-2 sm:h-[320px] lg:h-[300px]">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
-            <Image
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-              alt="Marketing Team"
-              fill
-              className="object-cover grayscale transition-transform duration-500 hover:scale-105"
-            />
-            <div className="absolute left-4 top-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-medium text-black shadow-lg">
-                <span className="h-2 w-2 rounded-full bg-black" />
-                Marketing Team
-              </div>
-            </div>
-          </Card>
-
-          {/* Card 2: 100+ Clients */}
-          <Card className="group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-3xl border-0 bg-white p-6 text-black shadow-lg transition-all hover:shadow-xl sm:h-[320px] lg:h-[300px]">
-            <div className="mb-auto">
-              <h3 className="font-heading text-6xl font-bold tracking-tight">100+</h3>
-            </div>
-            <p className="text-sm font-medium leading-relaxed text-gray-500">
-              Our Esteemed
-              <br />
-              Clients and Partners
-            </p>
-            <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-[#cff85d]/20 blur-2xl transition-all group-hover:bg-[#cff85d]/30" />
-          </Card>
-
-          {/* Card 3: Trusted Growth */}
-          <Card className="group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-3xl border-0 bg-[#1a1a1a] p-6 text-white shadow-lg transition-all hover:shadow-xl sm:h-[320px] lg:h-[300px]">
-            <div className="relative z-10">
-              <h3 className="mb-2 text-xl font-semibold leading-tight">
-                Trusted &
-                <br />
-                Transparent
-                <br />
-                Growth
-              </h3>
-            </div>
-            <div className="absolute bottom-0 right-0 opacity-40 transition-opacity group-hover:opacity-60">
-               <Icon name="mdi:lock-outline" size={120} className="translate-x-8 translate-y-8 text-gray-700" />
-            </div>
-             <div className="absolute bottom-6 right-6 z-10">
-               <Icon name="mdi:lock" size={28} className="text-gray-500" />
-            </div>
-          </Card>
-
-          {/* Card 4: 98.5% Success */}
-          <Card className="group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-3xl border-0 bg-[#1a1a1a] p-6 text-white shadow-lg transition-all hover:shadow-xl sm:h-[320px] lg:h-[300px]">
-            <div className="mb-auto">
-              <h3 className="font-heading text-6xl font-bold tracking-tight">98.5%</h3>
-            </div>
-            <div className="flex items-end justify-between">
-              <p className="text-sm font-medium leading-relaxed text-gray-400">
-                Marketing campaigns have
-                <br />
-                achieved 98% success
-              </p>
-              <div className="flex items-end gap-1">
-                <div className="h-5 w-2.5 rounded-t-sm bg-gray-600" />
-                <div className="h-7 w-2.5 rounded-t-sm bg-gray-500" />
-                <div className="h-10 w-2.5 rounded-t-sm bg-gray-400" />
-                <div className="h-16 w-4 rounded-t-md bg-[#cff85d]" />
-                <div className="h-7 w-2.5 rounded-t-sm bg-gray-500" />
-              </div>
-            </div>
-          </Card>
-
-          {/* Card 5: Global Enterprise */}
-          <Card className="group relative flex h-[280px] flex-col justify-between overflow-hidden rounded-3xl border-0 bg-white p-6 text-black shadow-lg transition-all hover:shadow-xl sm:h-[320px] lg:h-[300px]">
-            <div className="mb-auto flex items-start justify-between">
-              <h3 className="font-heading text-6xl font-bold tracking-tight">20+</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-black shadow-sm">
-                  Mexico
-                </span>
-                <span className="rounded-full bg-[#1a1a1a] px-3 py-1 text-[11px] font-semibold text-white shadow-sm">
-                  Australia
-                </span>
-              </div>
-            </div>
-            <p className="text-sm font-medium leading-relaxed text-gray-500">
-              Global Enterprise drives innovation
-            </p>
-            <div className="absolute -bottom-12 -right-4 h-40 w-40 rounded-full bg-gradient-to-br from-black to-gray-800 opacity-10 blur-lg" />
-             <div className="absolute bottom-0 right-0 h-32 w-full bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/2000px-World_map_blank_without_borders.svg.png')] bg-cover bg-center opacity-10 mix-blend-multiply" />
-          </Card>
-        </motion.div>
       </div>
+
+        <motion.div
+          initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.45, ease: easing }}
+          className="relative grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[26%_15%_18%_15%_26%] max-w-7xl "
+        >
+          
+          <motion.div
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.55, ease: easing }}
+            className="lg:col-span-1"
+          >
+            <MarketingTeamCard />
+          </motion.div>
+
+          <motion.div
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.65, ease: easing }}
+            className="lg:col-span-1 flex items-end justify-center"
+          >
+            <EsteemedClientsCard />
+          </motion.div>
+
+          <motion.div
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.75, ease: easing }}
+            className="lg:col-span-1 flex items-end justify-center"
+          >
+            <TrustedGrowthCard />
+          </motion.div>
+
+          <motion.div
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.85, ease: easing }}
+            className="lg:col-span-1 flex items-end justify-center"
+          >
+            <SuccessRateCard />
+          </motion.div>
+          <motion.div
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.85, ease: easing }}
+            className="lg:col-span-1 flex items-end justify-center"
+          >
+            <GlobalPresenceCard />
+          </motion.div>
+
+        </motion.div>
+
     </section>
   );
 }
+
+export default Hero;
