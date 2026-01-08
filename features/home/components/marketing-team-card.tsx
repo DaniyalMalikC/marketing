@@ -24,7 +24,7 @@ export function MarketingTeamCard({ className }: MarketingTeamCardProps) {
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
       />
       <div className="absolute -right-14 top-4 z-20">
-        <div className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-black shadow-[0_12px_30px_-16px_rgba(0,0,0,0.45)] ring-1 ring-black/5 backdrop-blur">
+        <div className="font-sans inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-black shadow-[0_12px_30px_-16px_rgba(0,0,0,0.45)] ring-1 ring-black/5 backdrop-blur">
           <span className="h-2.5 w-2.5 rounded-full bg-black" />
           Marketing Team
         </div>
