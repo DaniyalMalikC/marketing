@@ -1,7 +1,6 @@
 "use client";
 
 import { Button, Icon, Text } from "@/components/atoms";
-import { Card } from "@/components/molecules";
 import { motion, useReducedMotion } from "framer-motion";
 import { EsteemedClientsCard } from "./esteemed-clients-card";
 import { MarketingTeamCard } from "./marketing-team-card";
