@@ -99,5 +99,3 @@ export function SuccessRateCard({ className }: SuccessRateCardProps) {
     </Card>
   );
 }
-
-export default SuccessRateCard;

@@ -2,7 +2,7 @@
 
 import { Button, Icon, Text } from "@/components/atoms";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/molecules";
-import { Hero } from "@/features/home/components/hero";
+import { Hero } from "@/components/organisms";
 import { motion } from "framer-motion";
 
 export default function HomePage() {

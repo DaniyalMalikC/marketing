@@ -30,5 +30,3 @@ export function TrustedGrowthCard({ className }: TrustedGrowthCardProps) {
     </Card>
   );
 }
-
-export default TrustedGrowthCard;

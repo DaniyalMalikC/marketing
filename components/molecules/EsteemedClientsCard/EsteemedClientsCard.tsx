@@ -25,5 +25,3 @@ export function EsteemedClientsCard({ className }: EsteemedClientsCardProps) {
     </Card>
   );
 }
-
-export default EsteemedClientsCard;

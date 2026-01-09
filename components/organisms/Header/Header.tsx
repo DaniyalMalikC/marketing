@@ -23,7 +23,7 @@ export function Header() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.1, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="flex w-full max-w-6xl items-center gap-4 rounded-full border border-white/15 bg-white/10 px-5 py-3 font-heading font-semibold text-white shadow-[0_24px_120px_-80px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
+        className="flex w-full max-w-6xl items-center gap-4 rounded-2xl border border-white/15 bg-white/10 px-5 py-3 font-heading font-semibold text-white shadow-[0_24px_120px_-80px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
       >
         <Logo className="text-white" />
 
@@ -39,8 +39,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden items-center gap-2 rounded-full border border-white/10 bg-[#0e1012]/90 px-6 py-1 font-semibold text-white/80 sm:flex">
-            <span className="inline-flex h-2.5 w-2.5 items-center justify-center rounded-full bg-[#c6f45f]" aria-hidden />
+          <div className="hidden items-center gap-2  px-6 py-1 font-semibold text-white/80 sm:flex">
+          {/* Use Green dot icon */}
+            <span className="h-3 w-3 animate-pulse rounded-full bg-primary" aria-hidden="true" />
             Available
           </div>
           <Button

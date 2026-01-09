@@ -38,5 +38,3 @@ export function GlobalPresenceCard({ className }: GlobalPresenceCardProps) {
     </Card>
   );
 }
-
-export default GlobalPresenceCard;

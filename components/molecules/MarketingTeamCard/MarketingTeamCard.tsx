@@ -32,5 +32,3 @@ export function MarketingTeamCard({ className }: MarketingTeamCardProps) {
     </Card>
   );
 }
-
-export default MarketingTeamCard;

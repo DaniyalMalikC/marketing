@@ -1,0 +1,1 @@
+export { BackgroundIllustration } from "./BackgroundIllustration";
