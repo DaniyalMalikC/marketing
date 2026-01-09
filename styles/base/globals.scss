@@ -138,19 +138,19 @@
 
 :root {
   /* Markeva Brand Colors */
-  /* Primary: #cff85d (Lime Green) - OKLCH conversion */
-  --color-primary: oklch(93.5% 0.18 115);
-  --color-primary-foreground: oklch(15% 0.02 115);
-  --color-primary-50: oklch(98% 0.05 115);
-  --color-primary-100: oklch(96% 0.08 115);
-  --color-primary-200: oklch(94.5% 0.12 115);
-  --color-primary-300: oklch(93.5% 0.18 115);
-  --color-primary-400: oklch(88% 0.16 115);
-  --color-primary-500: oklch(82% 0.14 115);
-  --color-primary-600: oklch(72% 0.12 115);
-  --color-primary-700: oklch(58% 0.1 115);
-  --color-primary-800: oklch(42% 0.08 115);
-  --color-primary-900: oklch(28% 0.05 115);
+  /* Primary: #c6f45f (Lime Green) */
+  --color-primary: #c6f45f;
+  --color-primary-foreground: #0c0f03;
+  --color-primary-50: #f9feef;
+  --color-primary-100: #f4fddf;
+  --color-primary-200: #ebfbc7;
+  --color-primary-300: #e2faaf;
+  --color-primary-400: #daf897;
+  --color-primary-500: #c6f45f;
+  --color-primary-600: #a8cf51;
+  --color-primary-700: #8bab42;
+  --color-primary-800: #6d8634;
+  --color-primary-900: #4f6226;
 
   /* Secondary: #080d0e (Dark Blue-Gray) - OKLCH conversion */
   --color-secondary: oklch(6% 0.015 240);
@@ -175,13 +175,13 @@
   --color-popover-foreground: oklch(6% 0.015 240);
   --color-muted: oklch(96% 0.005 240);
   --color-muted-foreground: oklch(42% 0.013 240);
-  --color-accent: oklch(93.5% 0.18 115);
-  --color-accent-foreground: oklch(15% 0.02 115);
+  --color-accent: #c6f45f;
+  --color-accent-foreground: #0c0f03;
   --color-destructive: oklch(62.8% 0.256 29.2);
   --color-destructive-foreground: oklch(98% 0.002 29.2);
   --color-border: oklch(88% 0.008 240);
   --color-input: oklch(88% 0.008 240);
-  --color-ring: oklch(93.5% 0.18 115);
+  --color-ring: #c6f45f;
 
   /* Typography - Markeva Fonts */
   /* Font families are set via CSS variables in layout.tsx */
@@ -288,19 +288,19 @@
   --color-card-foreground: oklch(98% 0.002 240);
   --color-popover: oklch(8% 0.015 240);
   --color-popover-foreground: oklch(98% 0.002 240);
-  --color-primary: oklch(93.5% 0.18 115);
-  --color-primary-foreground: oklch(15% 0.02 115);
+  --color-primary: #c6f45f;
+  --color-primary-foreground: #0c0f03;
   --color-secondary: oklch(18% 0.015 240);
   --color-secondary-foreground: oklch(98% 0.002 240);
   --color-muted: oklch(18% 0.015 240);
   --color-muted-foreground: oklch(72% 0.01 240);
-  --color-accent: oklch(93.5% 0.18 115);
-  --color-accent-foreground: oklch(15% 0.02 115);
+  --color-accent: #c6f45f;
+  --color-accent-foreground: #0c0f03;
   --color-destructive: oklch(62.8% 0.256 29.2);
   --color-destructive-foreground: oklch(98% 0.002 29.2);
   --color-border: oklch(18% 0.015 240);
   --color-input: oklch(18% 0.015 240);
-  --color-ring: oklch(93.5% 0.18 115);
+  --color-ring: #c6f45f;
 }
 
 * {

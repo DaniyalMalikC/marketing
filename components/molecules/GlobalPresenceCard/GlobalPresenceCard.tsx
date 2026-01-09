@@ -20,10 +20,10 @@ export function GlobalPresenceCard({ className }: GlobalPresenceCardProps) {
         <h3 className="font-heading text-5xl font-bold leading-tight text-black">20+</h3>
         <p className="text-sm font-medium text-gray-500">Global Enterprise drives innovation</p>
         <div className="mt-3 flex gap-3">
-          <span className="rounded-full bg-black px-4 py-2 text-sm font-semibold text-[#c6f45f] shadow-[0_10px_30px_-16px_rgba(0,0,0,0.35)]">
+          <span className="rounded-full bg-black px-4 py-2 text-sm font-semibold text-primary shadow-[0_10px_30px_-16px_rgba(0,0,0,0.35)]">
             Mexico
           </span>
-          <span className="rounded-full bg-black px-4 py-2 text-sm font-semibold text-[#c6f45f] shadow-[0_10px_30px_-16px_rgba(0,0,0,0.35)]">
+          <span className="rounded-full bg-black px-4 py-2 text-sm font-semibold text-primary shadow-[0_10px_30px_-16px_rgba(0,0,0,0.35)]">
             Australia
           </span>
         </div>

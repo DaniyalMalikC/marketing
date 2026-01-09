@@ -63,7 +63,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="group h-12 rounded-full bg-[#c6f45f] px-8 font-semibold text-black shadow-[0_20px_50px_-30px_rgba(198,244,95,0.8)] transition-all duration-300 hover:bg-[#d4ff74] hover:shadow-[0_25px_80px_-40px_rgba(198,244,95,0.9)] focus-visible:ring-offset-0"
+              className="group h-12 rounded-full bg-primary px-8 font-semibold text-black shadow-[0_20px_50px_-30px_color-mix(in_oklab,var(--color-primary)_80%,transparent)] transition-all duration-300 hover:bg-[color-mix(in_oklab,var(--color-primary)_90%,white)] hover:shadow-[0_25px_80px_-40px_color-mix(in_oklab,var(--color-primary)_90%,transparent)] focus-visible:ring-offset-0"
               aria-label="Get started with our services"
             >
               Get Started

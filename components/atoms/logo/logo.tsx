@@ -31,9 +31,9 @@ export function Logo({
 
 function LogoIcon({ size = 32 }: { size?: number }) {
   return (
-    <div 
-      style={{ width: size, height: size }} 
-      className="flex items-center justify-center rounded bg-[#cff85d]"
+    <div
+      style={{ width: size, height: size }}
+      className="flex items-center justify-center rounded bg-primary"
     >
       <div className="h-1/2 w-1/2 bg-black/20" />
     </div>
